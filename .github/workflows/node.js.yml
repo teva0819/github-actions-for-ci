@@ -32,7 +32,11 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
     - uses: actions/download-artifact@main
+    - uses: actions/download-artifact@main
       with:
+        name: webpack artifacts
+        path: public
+    - name: npm install, and test
         name: webpack artifacts
         path: public
     - name: npm install, and test
